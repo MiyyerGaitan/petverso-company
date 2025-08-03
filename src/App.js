@@ -89,7 +89,7 @@ const initialProducts = [
   {
     id: 8,
     name: 'Alimento para gato Monello Salmón',
-    description: 'Croquetas balanceadas con sabor a pollo enriquecidas con vitaminas y minerales de 7kg.',
+    description: 'Croquetas balanceadas con sabor a pollo enriquecidas con vitaminas y minerales de 15kg.',
     price: 230.000,
     image: require('./images/Monello-Salmon-15kg-refact.png'),
     category: 'Alimentos',
