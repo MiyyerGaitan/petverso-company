@@ -1,7 +1,7 @@
 const initialProducts = [
   {
     id: 1,
-    name: 'Arena Sanitaria para Gato Calabaza',
+    name: 'Arena Sanitaria para Gato Calabaza Lavanda',
     description: 'Arena aglomerante ultra absorbente con control de olores aroma de lavanda de 25kg.',
     price: 60.000,
     image: require("./images/Arena-Lavanda-25kg-compress.webp"),
@@ -10,7 +10,7 @@ const initialProducts = [
   },
   {
     id: 2,
-    name: 'Arena Sanitaria para Gato Calabaza',
+    name: 'Arena Sanitaria para Gato Calabaza Cafe',
     description: 'Arena aglomerante ultra absorbente con control de olores aroma de café de 25kg.',
     price: 60.000,
     image: require("./images/Arena-Cafe-25kg-compress.webp"),
@@ -19,7 +19,7 @@ const initialProducts = [
   },
     {
     id: 3,
-    name: 'Arena Sanitaria para Gato Calabaza',
+    name: 'Arena Sanitaria para Gato Calabaza Vainilla',
     description: 'Arena aglomerante ultra absorbente con control de olores aroma de vainilla de 25kg.',
     price: 60.000,
     image: require("./images/Arena-Vainilla-25kg-compress.webp"),
@@ -28,7 +28,7 @@ const initialProducts = [
   },
     {
     id: 4,
-    name: 'Arena Sanitaria para Gato Calabaza',
+    name: 'Arena Sanitaria para Gato Calabaza Manzana',
     description: 'Arena aglomerante ultra absorbente con control de olores aroma de manzana de 25kg.',
     price: 60.000,
     image: require("./images/Arena-Manzana-25kg-refact3.png"),
@@ -37,7 +37,7 @@ const initialProducts = [
   },
     {
     id: 5,
-    name: 'Arena Sanitaria para Gato Calabaza',
+    name: 'Arena Sanitaria para Gato Calabaza Rosa',
     description: 'Arena aglomerante ultra absorbente con control de olores aroma de rosa de 25kg.',
     price: 60.000,
     image: require("./images/Arena-Rosa-25kg-compress.webp"),
@@ -46,7 +46,7 @@ const initialProducts = [
   },
     {
     id: 6,
-    name: 'Arena Sanitaria para Gato Calabaza',
+    name: 'Arena Sanitaria para Gato Calabaza Carbon activado',
     description: 'Arena aglomerante ultra absorbente con control de olores aroma de coco con carbón activado de 25kg.',
     price: 67.000,
     image: require("./images/Arena-Carbon-25kg-compress.webp"),
