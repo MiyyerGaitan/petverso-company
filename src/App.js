@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Footer from './components/Footer';
+import initialProducts from './products';
 
-// --- Iconos SVG (Heroicons) ---
 const ShoppingCartIcon = () => (
   <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
     <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 0 0-16.536-1.84M7.5 14.25 5.106 5.272M6 20.25a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Zm12.75 0a.75.75 0 1 1-1.5 0 .75.75 0 0 1 1.5 0Z" />
@@ -19,92 +19,6 @@ const SearchIcon = () => (
     <path strokeLinecap="round" strokeLinejoin="round" d="m21 21-5.197-5.197m0 0A7.5 7.5 0 1 0 5.196 5.196a7.5 7.5 0 0 0 10.607 10.607Z" />
   </svg>
 );
-
-
-// --- Datos de Ejemplo ---
-const initialProducts = [
-  {
-    id: 1,
-    name: 'Arena Sanitaria para Gato Calabaza',
-    description: 'Arena aglomerante ultra absorbente con control de olores aroma de lavanda de 25kg.',
-    price: 60.000,
-    image: require("./images/Arena-Lavanda-25kg-refact.png"),
-    category: 'Aseo',
-    stock: 15,
-  },
-  {
-    id: 2,
-    name: 'Arena Sanitaria para Gato Calabaza',
-    description: 'Arena aglomerante ultra absorbente con control de olores aroma de café de 25kg.',
-    price: 60.000,
-    image: require("./images/Arena-Cafe-25kg-refact.png"),
-    category: 'Aseo',
-    stock: 15,
-  },
-    {
-    id: 3,
-    name: 'Arena Sanitaria para Gato Calabaza',
-    description: 'Arena aglomerante ultra absorbente con control de olores aroma de vainilla de 25kg.',
-    price: 60.000,
-    image: require("./images/Arena-Vainilla-25kg-refact.png"),
-    category: 'Aseo',
-    stock: 15,
-  },
-    {
-    id: 4,
-    name: 'Arena Sanitaria para Gato Calabaza',
-    description: 'Arena aglomerante ultra absorbente con control de olores aroma de manzana de 25kg.',
-    price: 60.000,
-    image: require("./images/Arena-Manzana-25kg-refact3.png"),
-    category: 'Aseo',
-    stock: 15,
-  },
-    {
-    id: 5,
-    name: 'Arena Sanitaria para Gato Calabaza',
-    description: 'Arena aglomerante ultra absorbente con control de olores aroma de rosa de 25kg.',
-    price: 60.000,
-    image: require("./images/Arena-Rosa-25kg-refact.png"),
-    category: 'Aseo',
-    stock: 15,
-  },
-    {
-    id: 6,
-    name: 'Arena Sanitaria para Gato Calabaza',
-    description: 'Arena aglomerante ultra absorbente con control de olores aroma de coco con carbón activado de 25kg.',
-    price: 67.000,
-    image: require("./images/Arena-Carbon-25kg-refact.png"),
-    category: 'Aseo',
-    stock: 15,
-  },
-  {
-    id: 7,
-    name: 'Alimento para gato DonKat',
-    description: 'Croquetas balanceadas enriquecidas con vitaminas y minerales de 7kg.',
-    price: 68.000,
-    image: require('./images/DonKat-7kg-refact.png'),
-    category: 'Alimentos',
-    stock: 8,
-  },
-  {
-    id: 8,
-    name: 'Alimento para gato Monello Salmón',
-    description: 'Croquetas balanceadas con sabor a pollo enriquecidas con vitaminas y minerales de 15kg.',
-    price: 230.000,
-    image: require('./images/Monello-Salmon-15kg-refact.png'),
-    category: 'Alimentos',
-    stock: 8,
-  },
-    {
-    id: 9,
-    name: 'Alimento para gato BR for CAT Gatitos',
-    description: 'Croquetas balanceadas enriquecidas con vitaminas y minerales de 3kg.',
-    price: 70.000,
-    image: require('./images/Brforcat-gaticos-3-kg-refact.png'),
-    category: 'Alimentos',
-    stock: 8,
-  },
-];
 
 // --- Componente ProductCard ---
 function ProductCard({ product, onAddToCart }) {
