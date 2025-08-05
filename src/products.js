@@ -10,7 +10,7 @@ const initialProducts = [
   },
   {
     id: 2,
-    name: 'Arena Sanitaria para Gato Calabaza Cafe',
+    name: 'Arena Sanitaria para Gato Calabaza Café',
     description: 'Arena aglomerante ultra absorbente con control de olores aroma de café de 25kg.',
     price: 60.000,
     image: require("./images/Arena-Cafe-25kg-compress.webp"),
@@ -46,7 +46,7 @@ const initialProducts = [
   },
     {
     id: 6,
-    name: 'Arena Sanitaria para Gato Calabaza Carbon activado',
+    name: 'Arena Sanitaria para Gato Calabaza Carbón activado',
     description: 'Arena aglomerante ultra absorbente con control de olores aroma de coco con carbón activado de 25kg.',
     price: 67.000,
     image: require("./images/Arena-Carbon-25kg-compress.webp"),
