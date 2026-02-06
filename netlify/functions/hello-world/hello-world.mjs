@@ -16,7 +16,7 @@ export default async (request, context) => {
     const subject = body.name || 'World';
 
     return new Response(
-      JSON.stringify(process.env.GOOGLE_SERVICE_ACCOUNT_JSON),
+      JSON.stringify({ message: `Hello ${subject}` }),
       {
         status: 200,
         headers: {
