@@ -16,7 +16,7 @@ export default async (request, context) => {
     const subject = body.name || 'World';
 
     return new Response(
-      JSON.stringify({ message: `Hello ${subject}` }),
+      JSON.stringify(process.env.SECRET_TOKEN),
       {
         status: 200,
         headers: {
