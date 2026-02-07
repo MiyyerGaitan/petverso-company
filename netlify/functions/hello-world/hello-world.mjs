@@ -86,11 +86,20 @@ export default async (request, context) => {
     const body = await request.json();
     const subject = body.id;
 
+    // Validar que subject sea numérico y máximo 20 dígitos
+    if (!/^\d{1,20}$/.test(subject)) {
+      return new Response(
+        JSON.stringify({ error: 'valor no permitido' }),
+        { status: 400 }
+      );
+    }
+
     const accessToken = await obtenerToken();
     const result = await buscarRecomendacionPro(subject, accessToken);
+    const recomendacion = result ? result.recomendacion : "No se encontro recomendación";
 
     return new Response(
-      JSON.stringify({ result }),
+      JSON.stringify({ recomendacion }),
       {
         status: 200,
         headers: {
