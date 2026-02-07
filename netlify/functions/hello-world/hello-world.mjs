@@ -85,11 +85,7 @@ export default async (request, context) => {
     const result = await buscarRecomendacionPro(subject, accessToken);
 
     return new Response(
-<<<<<<< HEAD
-      JSON.stringify({ message: `Hello ${subject}` }),
-=======
-      JSON.stringify(result),
->>>>>>> miyyer
+      JSON.stringify({ result }),
       {
         status: 200,
         headers: {
