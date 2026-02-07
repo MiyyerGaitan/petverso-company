@@ -2,7 +2,7 @@ import { GoogleAuth } from 'google-auth-library';
 import { sheets_v4 } from 'googleapis';
 
 const auth = new GoogleAuth({
-  keyFile: 'credentials.json',
+  keyFile: process.env.GOOGLE_SERVICE_ACCOUNT_JSON,
   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
 });
 
