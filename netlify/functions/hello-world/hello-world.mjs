@@ -1,5 +1,18 @@
-// Docs on request and context
-// https://docs.netlify.com/functions/build/#code-your-function-2
+import { GoogleAuth } from 'google-auth-library';
+import { sheets_v4 } from 'googleapis';
+
+const auth = new GoogleAuth({
+  keyFile: 'credentials.json',
+  scopes: ['https://www.googleapis.com/auth/spreadsheets'],
+});
+
+async function obtenerToken() {
+  const client = await auth.getClient();
+  const respuesta = await client.getAccessToken();
+  const token = respuesta.token;
+
+  return token;
+}
 
 export default async (request, context) => {
   try {
