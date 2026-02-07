@@ -1,8 +1,13 @@
 import { GoogleAuth } from 'google-auth-library';
 import { sheets_v4 } from 'googleapis';
 
+const credentialsBase64 = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
+const credentials = JSON.parse(
+  Buffer.from(credentialsBase64, 'base64').toString('utf8')
+);
+
 const auth = new GoogleAuth({
-  keyFile: process.env.GOOGLE_SERVICE_ACCOUNT_JSON,
+  credentials,
   scopes: ['https://www.googleapis.com/auth/spreadsheets'],
 });
 const spreadsheetId = process.env.SPREADSHEET_ID;
