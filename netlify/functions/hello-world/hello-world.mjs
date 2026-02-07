@@ -81,8 +81,11 @@ export default async (request, context) => {
     const body = await request.json();
     const subject = body.id;
 
+    const accessToken = await obtenerToken();
+    const result = await buscarRecomendacionPro(subject, accessToken);
+
     return new Response(
-      JSON.stringify(), // Aquí puedes incluir la lógica para usar `obtenerToken` y `buscarRecomendacionPro`
+      JSON.stringify(result),
       {
         status: 200,
         headers: {
