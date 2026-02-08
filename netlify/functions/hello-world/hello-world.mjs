@@ -1,5 +1,4 @@
 import { GoogleAuth } from 'google-auth-library';
-import { sheets_v4 } from 'googleapis';
 
 const credentialsBase64 = process.env.GOOGLE_SERVICE_ACCOUNT_JSON;
 const credentials = JSON.parse(
@@ -20,11 +19,11 @@ async function obtenerToken() {
   return token;
 }
 
-async function buscarRecomendacionPro( cedula, accessToken) {
+async function buscarRecomendacion(id, accessToken) {
   try {
     // 1. Definir la query SQL-like
     // Usamos 'A' para Cédula y 'B' para Recomendación
-    const sql = `SELECT * WHERE A = ${cedula} AND B IS NOT NULL`;
+    const sql = `SELECT * WHERE A = ${id} AND B IS NOT NULL`;
     const queryEncoded = encodeURIComponent(sql);
     
     // 2. Construir la URL del endpoint de Visualización
@@ -95,7 +94,7 @@ export default async (request, context) => {
     }
 
     const accessToken = await obtenerToken();
-    const result = await buscarRecomendacionPro(subject, accessToken);
+    const result = await buscarRecomendacion(subject, accessToken);
     const recomendacion = result ? result.recomendacion : "No se encontro recomendación";
 
     return new Response(
