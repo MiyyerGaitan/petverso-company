@@ -59,7 +59,7 @@ export default async (request, context) => {
 
     let fecha = new Date().toLocaleDateString('es-ES');
     let id = values[0] || "";
-    let respuesta = respuestasPermitidas[values[1]] || "";
+    let respuesta = values[1];
     let observaciones = values[2] || ""; 
     
 
@@ -76,6 +76,8 @@ export default async (request, context) => {
         { status: 400 }
       );
     }
+
+    respuesta = respuestasPermitidas[values[1]];
 
     if (!caracteresPermitidos.test(observaciones)) {
       return new Response(
